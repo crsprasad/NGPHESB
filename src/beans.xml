@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd 
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	">
+	 
+	<bean id="serviceController" class="com.logica.ngph.esb.servicesImpl.ServiceControllerImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+		<property name="autoRouterService" ref="autoRouterService" />
+		<property name="entityControlService" ref="entityControlService" />
+		<property name="enrichService" ref="enrichService" />
+		<property name="validateService" ref="validateService" />
+		<property name="foreignExchangeService" ref="foreignExchangeService" />
+		<property name="interveneService" ref="interveneService" />
+		<property name="swiftChannelService" ref="swiftChannelService" />
+		<property name="sfmsChannelService" ref="sfmsChannelService" />
+		<property name="impsChannelService" ref="impsChannelService" />
+		<property name="lcbgHandler" ref="lcbgHandler" />
+	</bean>
+	
+	<bean id="lcbgHandler" class="com.logica.ngph.esb.servicesImpl.LCBgHandlerServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="infoCanonicalService" class="com.logica.ngph.esb.servicesImpl.InfoCanonicalServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="ismsHandler" class="com.logica.ngph.esb.servicesImpl.SMSHandler">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="foreignExchangeService" class="com.logica.ngph.esb.servicesImpl.ForeignExchangeServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	<bean id="autoRouterService" class="com.logica.ngph.esb.servicesImpl.AutoRouterServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="impsChannelService" class="com.logica.ngph.esb.servicesImpl.ISO8583ChannelServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="sfmsChannelService" class="com.logica.ngph.esb.servicesImpl.SFMSChannelServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="swiftChannelService" class="com.logica.ngph.esb.servicesImpl.SwiftChannelServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />	
+	</bean>
+	
+	<bean id="entityControlService" class="com.logica.ngph.esb.servicesImpl.EntityControlServiceImpl">
+		<property name="autoRouterService" ref="autoRouterService" />
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="esbServiceDao" class="com.logica.ngph.esb.daosImpl.EsbServiceDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+		 <property name="oracleLobHandler" ref="oracleLobHandler"/>
+	</bean>
+	
+	<bean id="interveneService" class="com.logica.ngph.esb.servicesImpl.InterveneServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="swiftParserAction" class="com.logica.ngph.action.SwiftMSgAction">
+		<property name="swiftParserDao" ref="swiftParserDao" />
+	</bean>
+	
+	<bean id="swiftParserDao" class="com.logica.ngph.esb.daosImpl.SwiftParserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+		 <property name="oracleLobHandler" ref="oracleLobHandler"/>
+	</bean>
+	
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"/>
+
+	<bean id="oracleLobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler">
+	  <property name="nativeJdbcExtractor">
+	  <ref local="nativeJdbcExtractor"/>
+	  </property>
+	</bean>
+
+	<bean id="requestQueueHandlerDao" class="com.logica.ngph.esb.daosImpl.RequestQueueHandlerDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="requestQueueHandlerDaoforQueue" class="com.logica.ngph.esb.daosImpl.RequestQueueHandlerDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="requestQueueHandlerService" class="com.logica.ngph.esb.servicesImpl.RequestQueueHandlerServiceImpl" scope="prototype">
+		<property name="requestQueueHandlerDao" ref="requestQueueHandlerDao" />
+	</bean>
+	
+	<bean id="responseQueueHandlerService" class="com.logica.ngph.esb.servicesImpl.ResponseQueueHandlerServiceImpl">
+		<property name="requestQueueHandlerDao" ref="requestQueueHandlerDao" />
+	</bean>
+	
+	<bean id="acknowledgementsService" class="com.logica.ngph.esb.servicesImpl.AcknowledgementsServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" /> 
+		<property name="swiftChannelService" ref="swiftChannelService" />
+		<property name="sfmsChannelService" ref="sfmsChannelService" />
+		<property name="swiftParserDao" ref="swiftParserDao" />
+	</bean>
+
+	<bean id="networkValdationService" class="com.logica.ngph.esb.servicesImpl.NetworkValidationServiceImpl">
+	<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>	
+	
+	<bean id="enrichService" class="com.logica.ngph.esb.servicesImpl.EnrichServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="validateService" class="com.logica.ngph.esb.servicesImpl.ValidateServiceImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+	</bean>
+	
+	<bean id="lmLinkDao" class="com.logica.ngph.esb.daosImpl.LmLinkDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+	<bean id="validatorDao" class="com.logica.ngph.validators.daoImpl.ValidatorDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="msgFieldValidator" class="com.logica.ngph.validators.serviceImpl.MsgFieldValidator"/>
+	<bean id="msgFormatValidator" class="com.logica.ngph.validators.serviceImpl.MsgFormatValidator"/>
+	
+	
+	<bean id="msgFieldDataInitializer" class="com.logica.ngph.validators.serviceImpl.MsgFieldDataInitializer">
+		<property name="validatorDao" ref="validatorDao" />
+	</bean>
+			
+		<bean id="msgFormatDataInitializer" class="com.logica.ngph.validators.serviceImpl.MsgFormatDataInitializer">
+		<property name="validatorDao" ref="validatorDao" />
+	</bean>
+	
+	<bean id="reportRPTAction" class="com.logica.ngph.action.ReportRPTAction">
+		<property name="reportRPTDao" ref="reportRPTDao" />  
+	</bean>  
+
+	<bean id="reportRPTDao" class="com.logica.ngph.esb.daosImpl.ReportRPTDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+	<bean id="stpFileUpload" class="com.logica.ngph.esb.servicesImpl.STPFileUploadImpl">
+		<property name="esbServiceDao" ref="esbServiceDao" />
+		<property name="platformTransactionManager" ref="transactionManager"></property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="dataSource"/>
+	</bean>
+	 
+	<bean id="sodEodDao" class="com.logica.ngph.esb.daosImpl.SodEodDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="sodEodService" class="com.logica.ngph.esb.servicesImpl.SodEodServiceImpl">
+		<property name="sodEodTaskDao" ref="sodEodDao"></property>
+	</bean>
+	
+	<bean id="sodEodAction" class="com.logica.ngph.action.SOdEodAction">
+		<property name="sodEodService" ref="sodEodService"></property>
+	</bean>
+	
+
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	  
+	 <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />   
+	</bean>
+	
+	<!--<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+	 <property name="locations">  
+    <list>  
+      <value>classpath:System.properties</value>  
+    </list>  
+  	</property>  
+	</bean> 
+	-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${db.driverClassName}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+		<property name="initialSize" value="${db.initialSize}" />
+		<property name="maxActive" value="${db.maxActive}" />
+	</bean>
+                                                                       
+ <bean id="environmentVariablesConfiguration"
+     class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+   <property name="algorithm" value="PBEWithMD5AndDES" />
+   <property name="password" value="Rajat" />
+ </bean>
+  
+ <bean id="configurationEncryptor"
+     class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+   <property name="config" ref="environmentVariablesConfiguration" />
+ </bean>
+
+ <bean id="propertyConfigurer"
+     class="org.jasypt.spring3.properties.EncryptablePropertyPlaceholderConfigurer">
+   <constructor-arg ref="configurationEncryptor" />
+   <property name="locations">
+     <list>
+       <value>classpath:System.properties</value>
+     </list>
+   </property>
+   </bean>
+
+</beans>

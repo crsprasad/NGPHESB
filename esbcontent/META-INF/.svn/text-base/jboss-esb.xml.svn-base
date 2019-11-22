@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<jbossesb parameterReloadSecs="300"
+ xmlns="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd">
+ <providers>
+   <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9011.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9011.TO.QNG.GWID">
+    <jms-message-filter dest-name="9011.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9000.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9000.TO.QNG.GWID">
+    <jms-message-filter dest-name="9000.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9001.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9001.TO.QNG.GWID">
+    <jms-message-filter dest-name="9001.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9002.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9002.TO.QNG.GWID">
+    <jms-message-filter dest-name="9002.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9003.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9003.TO.QNG.GWID">
+    <jms-message-filter dest-name="9003.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9004.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9004.TO.QNG.GWID">
+    <jms-message-filter dest-name="9004.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="QNGQMGR"
+   jndi-URL="INPRJ-RTGS01:1414/QNG_SVR_CHNL"
+   jndi-context-factory="com.ibm.mq.jms.context.WMQInitialContextFactory" name="WebSphereMQ_9005.TO.QNG">
+   <property name="protocol" value="jms"/>
+   <jms-bus busid="9005.TO.QNG.GWID">
+    <jms-message-filter dest-name="9005.TO.QNG" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+  <jms-provider connection-factory="ConnectionFactory" name="JBossMQ">
+   <jms-bus busid="9011.TO.QNG.GWID">
+    <jms-message-filter dest-name="queue/9011.TO.QNG.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9011.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9011.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9010.TO.QNG.GWID">
+    <jms-message-filter dest-name="queue/9010.TO.QNG.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9010.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9010.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9000.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9000.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9001.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9001.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9002.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9002.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9003.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9003.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9004.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9004.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="9005.TO.QNG.ESBID">
+    <jms-message-filter dest-name="queue/9005.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9010.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9010.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9010.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9010.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9011.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9011.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9011.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9011.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9000.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9000.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9000.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9000.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9001.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9001.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9001.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9001.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9002.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9002.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9002.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9002.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9003.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9003.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9003.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9003.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9004.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9004.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9004.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9004.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9005.GWID">
+    <jms-message-filter dest-name="queue/QNG.TO.9005.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="QNG.TO.9005.ESBID">
+    <jms-message-filter dest-name="queue/QNG.TO.9005.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SWIFTQUEUE.GWID">
+    <jms-message-filter dest-name="queue/SWIFTQUEUE.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SWIFTQUEUE.ESBID">
+    <jms-message-filter dest-name="queue/SWIFTQUEUE.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SFMSQUEUE.GWID">
+    <jms-message-filter dest-name="queue/SFMSQUEUE.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SFMSQUEUE.ESBID">
+    <jms-message-filter dest-name="queue/SFMSQUEUE.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ISO8583QUEUE.GWID">
+    <jms-message-filter dest-name="queue/ISO8583QUEUE.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ISO8583QUEUE.ESBID">
+    <jms-message-filter dest-name="queue/ISO8583QUEUE.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="RESPONSEQUEUE.GWID">
+    <jms-message-filter dest-name="queue/RESPONSEQUEUE.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="RESPONSEQUEUE.ESBID">
+    <jms-message-filter dest-name="queue/RESPONSEQUEUE.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <!--JBOSS queues for background services START-->
+   <jms-bus busid="AuditMsgGwChannel">
+    <jms-message-filter dest-name="queue/AuditMessageQueueGW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="auditMsgEsbChannel">
+    <jms-message-filter dest-name="queue/AuditMessageQueueESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ResumeMsgGwChannel">
+    <jms-message-filter dest-name="queue/ResumeMsgQueueGW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ResumeMsgEsbChannel">
+    <jms-message-filter dest-name="queue/ResumeMsgQueueESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="AuthMsgGwChannel">
+    <jms-message-filter dest-name="queue/VerifyMsgQueueGW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="AuthMsgEsbChannel">
+    <jms-message-filter dest-name="queue/VerifyMsgQueueESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ReportRPTGw">
+    <jms-message-filter dest-name="queue/ReportRPTQueueGW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="ReportRPTEsb">
+    <jms-message-filter dest-name="queue/ReportRPTQueueESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SMSQUEUE.GWID">
+    <jms-message-filter dest-name="queue/SMS.TO.QNG.GW" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="SMSQUEUE.ESBID">
+    <jms-message-filter dest-name="queue/SMS.TO.QNG.ESB" dest-type="QUEUE"/>
+   </jms-bus>
+   <!-- JBOSS queues for background services END-->
+  </jms-provider>
+ <!-- Schedulers Configured Start  --> 
+ 
+      <schedule-provider name="Schedulers">
+            <simple-schedule frequency="180" scheduleid="DBPollingScheduler"/>
+            <!-- 
+            <simple-schedule frequency="5" scheduleid="IMPSHandlerScheduler"/>
+            <simple-schedule frequency="5" scheduleid="TCPFlusher"/>
+             -->
+      </schedule-provider>
+  
+ <!--
+  <fs-provider name="FSProvider">
+   <fs-bus busid="FileChannel">
+    <fs-message-filter directory="C:\fsinput" error-delete="false"
+     error-directory="C:\fserror" error-suffix=".IN_ERROR"
+     input-suffix=".txt" post-delete="false" post-directory="C:\fsout"
+     post-rename="true" post-suffix=".sendToQng"/>
+   </fs-bus>
+  </fs-provider>-->
+ </providers>
+ <services>
+  <!-- File System Provider --><!--
+  <service category="FileUpload" description="FileUploading"
+   invmScope="GLOBAL" name="File Upload">
+   <listeners>
+    <fs-listener busidref="FileChannel" is-gateway="true" name="FSListener"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.utils.GenericFileImporter"
+     name="doProcess" process="doProcess"/>
+   </actions>
+  </service>
+  -->
+  <!-- Service for Scheduler Starts --> 
+ 
+      <service category="Schedulers" description="Schedulers Listeners" name="Schedulers">
+            <listeners>
+ 		<!--                
+                  <scheduled-listener event-processor="com.logica.ngph.esb.servicesImpl.IMPSHandlerService" name="IMPS schedule-listener" scheduleidref="IMPSHandlerScheduler"/>
+                  <scheduled-listener event-processor="com.logica.ngph.esb.servicesImpl.TCPFlusher"  name="TCP schedule-listener" scheduleidref="TCPFlusher"/>
+      	-->
+                  <scheduled-listener event-processor="com.logica.ngph.esb.servicesImpl.DBPollerServiceListenerImpl" name="DBPolling schedule-listener" scheduleidref="DBPollingScheduler" />
+                
+            </listeners>
+      </service>
+ 
+  <service category="RRBHOST" description="BANK SWIFT HOST" name="RRB.HOST.SWIFT">
+   <listeners>
+    <jms-listener busidref="9011.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9011.TO.QNG.ESBID" name="HOSTSWIFTS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9011.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="SWIFTHOST" description="BANK SWIFT HOST" name="BANK.HOST.SWIFT">
+   <listeners>
+    <jms-listener busidref="9000.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9000.TO.QNG.ESBID" name="HOSTSWIFTS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9000.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="SWIFTGW" description="SWIFT GATEWAY" name="ALLIANCE.SWIFT">
+   <listeners>
+    <jms-listener busidref="9001.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9001.TO.QNG.ESBID" name="GWSWIFTS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9001.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="RTGSHOST" description="BANK RTGS HOST" name="BANK.HOST.RTGS">
+   <listeners>
+    <jms-listener busidref="9002.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9002.TO.QNG.ESBID" name="HOSTRTGSS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9002.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="RTGSGW" description="RTGS GATEWAY" name="PI.RTGS">
+   <listeners>
+    <jms-listener busidref="9003.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9003.TO.QNG.ESBID" name="GWRTGSS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9003.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="NEFTHOST" description="BANK NEFT HOST" name="BANK.HOST.NEFT">
+   <listeners>
+    <jms-listener busidref="9004.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9004.TO.QNG.ESBID" name="HOSTNEFTS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9004.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="NEFTGW" description="NEFT GATEWAY" name="NEFTGW.NEFT">
+   <listeners>
+    <jms-listener busidref="9005.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9005.TO.QNG.ESBID" name="GWNEFTS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9005.TO.QNG.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="IMPSGW" description="IMPS GATEWAY" name="IMPSGW.ISO8583">
+   <listeners>
+    <jms-listener busidref="9010.TO.QNG.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="9010.TO.QNG.ESBID" name="GWIMPSS"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.RequestQueueHandlerAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+     <property name="gatewayName" value="9010.TO.QNG.GW"/>
+     <property name="gatewayDirection" value="I"/>
+    </action>
+   </actions>
+  </service>
+  <service category="SWIFT_ADAPTER" description="SWIFT MESSAGE ADAPTER" name="QNGSWIFTADAPTER">
+   <listeners>
+    <jms-listener busidref="SWIFTQUEUE.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="SWIFTQUEUE.ESBID" name="SWIFTESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.SwiftMSgAction"
+     name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+    </action>
+   </actions>
+  </service>
+  <service category="SFMS_ADAPTER" description="SFMS MESSAGE ADAPTER" name="QNGSFMSADAPTER">
+   <listeners>
+    <jms-listener busidref="SFMSQUEUE.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="SFMSQUEUE.ESBID" name="SFMSESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.SFMSAction" name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+    </action>
+   </actions>
+  </service>
+  <service category="ISO8583_ADAPTER"
+   description="ISO8583 MESSAGE ADAPTER" name="QNGISO8583ADAPTER">
+   <listeners>
+    <jms-listener busidref="ISO8583QUEUE.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="ISO8583QUEUE.ESBID" name="ISO8583ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.ISOMsgAction" name="doProcess" process="doProcess">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+    </action>
+   </actions>
+  </service>
+  <service category="RESPONDER" description="RESPONSE ROUTER" name="QNGRESPONDER">
+   <listeners>
+    <jms-listener busidref="RESPONSEQUEUE.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="RESPONSEQUEUE.ESBID" name="RESPONSEESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.ResponseQueueHandlerAction"
+     name="execute" process="execute">
+     <property name="exceptionMethod" value="exceptionHandler"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTORRBHOST" description="QNG TO RRB HOST" name="RRBINS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9011.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9011.ESBID" name="QNGTO9000ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9011.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTOSWIFTHOST" description="QNG TO SWIFT HOST" name="SWIFTINS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9000.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9000.ESBID" name="QNGTO9000ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9000.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTOSWIFTGW" description="QNG TO SWIFT" name="SWIFTOUTS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9001.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9001.ESBID" name="QNGTO9001ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9001.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTORTGSHOST" description="QNG TO RTGS HOST" name="RTGSINS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9002.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9002.ESBID" name="QNGTO9002ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9002.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTORTGSGW" description="QNG TO RTGS" name="RTGSOUTS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9003.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9003.ESBID" name="QNGTO9003ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9003.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTONEFTHOST" description="QNG TO NEFT HOST" name="NEFTINS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9004.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9004.ESBID" name="QNGTO9004ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9004.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTONEFTGW" description="QNG TO NEFT" name="NEFTOUTS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9005.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9005.ESBID" name="QNGTO9005ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.MQProvider" name="doProcess" process="doProcess">
+     <property name="gatewayName" value="QNG.TO.9005.GW"/>
+    </action>
+   </actions>
+  </service>
+  <service category="QNGTOIMPSGW" description="QNG TO IMPS" name="IMPSOUTS">
+   <listeners>
+    <jms-listener busidref="QNG.TO.9010.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="QNG.TO.9010.ESBID" name="QNGTO9010ESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.TCPClient" name="doProcess" process="doProcess">
+     <property name="connectedEI" value="9010"/>
+    </action>
+   </actions>
+  </service>
+  <!--Services for background services START-->
+  <service category="AuditServiceESB" description="Audit Service" name="AuditMessageListener">
+   <listeners>
+    <jms-listener busidref="AuditMsgGwChannel" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="auditMsgEsbChannel" name="AuditService"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.AuditServiceAction"
+     name="performAudit" process="performAudit"/>
+   </actions>
+  </service>
+  <service category="ResumeMsgServiceESB"
+   description="Resume Message Service" name="ResumeMessageListener">
+   <listeners>
+    <jms-listener busidref="ResumeMsgGwChannel" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="ResumeMsgEsbChannel" name="ResumeMsgService"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.ResumeMessageAction"
+     name="performServiceController" process="performServiceController"/>
+   </actions>
+  </service>
+  <service category="AuthServiceESB" description="Auth Service" name="AuthMessageListener">
+   <listeners>
+    <jms-listener busidref="AuthMsgGwChannel" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="AuthMsgEsbChannel" name="AuthService"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.esb.servicesImpl.AuthStpServiceImpl"
+     name="execute" process="execute"/>
+   </actions>
+  </service>
+  <service category="ReportRPTServiceESB" description="Replica World" name="ReportRPTListener">
+   <listeners>
+    <jms-listener busidref="ReportRPTGw" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="ReportRPTEsb" name="ReportWorld"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.ReportRPTAction"
+     name="ReportRPT" process="doProcess"/>
+   </actions>
+  </service>
+  <service category="SMS LISTENER" description="SMS ACCEPTOR" name="SMSLISTENER">
+   <listeners>
+    <jms-listener busidref="SMSQUEUE.GWID" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="SMSQUEUE.ESBID" name="SMSESB"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="com.logica.ngph.action.SMSHandlerAction"
+     name="doProcess" process="doProcess"/>
+   </actions>
+  </service>
+  <!-- Services for background services END -->
+ </services>
+</jbossesb>

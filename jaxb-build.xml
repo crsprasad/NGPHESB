@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<project name="NGPH" basedir="." >
+<property name="src.dir" value="src"/>
+<property name="lib.dir" value="./esbcontent/lib"/>
+
+<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+  <classpath>
+    <fileset dir="${lib.dir}" includes="*.jar" />
+  </classpath>
+</taskdef>
+
+  <target name="generate-xjc" description="Generate classes with JAXB">
+        <xjc package="com.logica.ngph.iso.jaxb.pacs008001v02.generated" destdir="${src.dir}" >
+            <classpath>
+			<pathelement location="${src.dir}"/>
+			<pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <arg value="-extension"/>
+            <!--arg value="-Xinject-listener-code" /-->
+            <schema file="${src.dir}/pacs.008.001.02.xsd"/>
+        </xjc>
+    </target>	
+
+</project>

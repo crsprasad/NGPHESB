@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model
+END
+SwiftTagListBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftTagListBlock.java
+END
+SwiftValueBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftValueBlock.java
+END
+SwiftBlockUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlockUser.java
+END
+SwiftBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock.java
+END
+SwiftBlock2Input.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock2Input.java
+END
+SwiftBlock2Output.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock2Output.java
+END
+Tag.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/Tag.java
+END
+BaseSwiftMessageVisitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/BaseSwiftMessageVisitor.java
+END
+WifeSwiftMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/WifeSwiftMessage.java
+END
+UnparsedTextList.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/UnparsedTextList.java
+END
+SwiftBlock1.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock1.java
+END
+SwiftBlock2.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock2.java
+END
+ISwiftMessageVisitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/ISwiftMessageVisitor.java
+END
+SwiftBlock3.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock3.java
+END
+SwiftBlock4.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock4.java
+END
+SwiftBlock5.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/NGPH/!svn/ver/3596/NGPH%20Rel%201.0/SOURCE/NgphEsb/src/com/logica/ngph/finance/messageparser/swift/model/SwiftBlock5.java
+END

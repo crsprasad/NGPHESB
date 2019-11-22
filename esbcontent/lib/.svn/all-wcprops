@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/NGPH/!svn/ver/4195/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib
+END
+jaxb1-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/NGPH/!svn/ver/2871/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jaxb1-impl.jar
+END
+org.springframework.aop-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.aop-3.0.5.RELEASE.jar
+END
+org.springframework.asm-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.asm-3.0.5.RELEASE.jar
+END
+jaxb-xjc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/2871/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jaxb-xjc.jar
+END
+dhbcore.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/dhbcore.jar
+END
+com.ibm.mq.pcf-6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/com.ibm.mq.pcf-6.1.jar
+END
+org.springframework.context-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.context-3.0.5.RELEASE.jar
+END
+org.springframework.transaction-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.transaction-3.0.5.RELEASE.jar
+END
+iaik_mod.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaik_mod.jar
+END
+jasypt-1.9.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/NGPH/!svn/ver/3655/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jasypt-1.9.0.jar
+END
+org.springframework.beans-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.beans-3.0.5.RELEASE.jar
+END
+org.springframework.core-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.core-3.0.5.RELEASE.jar
+END
+jta.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jta.jar
+END
+commons-pool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/commons-pool.jar
+END
+jce-jdk12-147.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jce-jdk12-147.jar
+END
+jaxb-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/NGPH/!svn/ver/2871/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jaxb-impl.jar
+END
+org.springframework.expression-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.expression-3.0.5.RELEASE.jar
+END
+jce-jdk13-147.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jce-jdk13-147.jar
+END
+ojdbc14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/NGPH/!svn/ver/4195/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/ojdbc14.jar
+END
+org.springframework.jdbc-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.jdbc-3.0.5.RELEASE.jar
+END
+antlr-runtime-3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/antlr-runtime-3.0.jar
+END
+com.ibm.mq.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/com.ibm.mq.jar
+END
+jasypt-spring3-1.9.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/NGPH/!svn/ver/3655/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jasypt-spring3-1.9.0.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/NGPH/!svn/ver/981/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/log4j-1.2.16.jar
+END
+iaik_javax_crypto.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaik_javax_crypto.jar
+END
+com.ibm.mqjms.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/com.ibm.mqjms.jar
+END
+jpos.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/NGPH/!svn/ver/3615/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jpos.jar
+END
+hsqldb.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/hsqldb.jar
+END
+iaik_jce_full.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaik_jce_full.jar
+END
+commons-dbcp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/commons-dbcp.jar
+END
+jce-ext-jdk12-147.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jce-ext-jdk12-147.jar
+END
+jce-ext-jdk13-147.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jce-ext-jdk13-147.jar
+END
+mqcontext.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/mqcontext.jar
+END
+org.springframework.context.support-3.0.5.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/org.springframework.context.support-3.0.5.RELEASE.jar
+END
+com.springsource.org.aopalliance-1.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/NGPH/!svn/ver/956/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/com.springsource.org.aopalliance-1.0.0.jar
+END
+jms.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jms.jar
+END
+iaikPkcs11WrapperDemos.jar
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaikPkcs11WrapperDemos.jar
+END
+connector.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/435/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/connector.jar
+END
+jaxb-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/2871/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/jaxb-api.jar
+END
+commons-logging-1.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/NGPH/!svn/ver/60/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/commons-logging-1.0.4.jar
+END
+iaik_jce.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaik_jce.jar
+END
+junit-4.8.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/NGPH/!svn/ver/138/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/junit-4.8.2.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/NGPH/!svn/ver/2871/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/activation.jar
+END
+iaikPkcs11Wrapper.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NGPH/!svn/ver/3618/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/lib/iaikPkcs11Wrapper.jar
+END

@@ -1,0 +1,9 @@
+<cp-and-translate
+   dest="jboss-esb.xml"
+   name=".svn/text-base/jboss-esb.xml.svn-base"/>
+<modify-entry
+   name="jboss-esb.xml"
+   text-time="working"/>
+<modify-entry
+   name="jboss-esb.xml"
+   working-size="working"/>

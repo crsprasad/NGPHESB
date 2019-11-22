@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/NGPH/!svn/ver/4428/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/META-INF
+END
+deployment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/NGPH/!svn/ver/4407/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/META-INF/deployment.xml
+END
+jboss-esb.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/NGPH/!svn/ver/4428/NGPH%20Rel%201.0/SOURCE/NgphEsb/esbcontent/META-INF/jboss-esb.xml
+END

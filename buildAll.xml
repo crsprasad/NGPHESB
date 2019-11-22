@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse.ant.import?>
+<!--
+	File: NGPHEsb project's build file.
+	Author:ISMAIL SHARIFF
+	Version 1.0, 09/SEP/2011
+-->	
+<project name="NGPH" basedir="." default="all">
+	
+	<target name="all" depends="common, esb,  web" />  
+		
+	<target name="common">     
+		<ant antfile="../NgphCommon/build.xml" target="dist" dir="../NgphCommon"/>         
+	</target>  
+		
+	<target name="esb">     
+		<ant antfile="build.xml" target="dist" />         
+	</target> 
+	
+	<target name="web">     
+		<ant antfile="../NgphWeb/build.xml" target="dist" dir="../NgphWeb"/>         
+	</target> 
+	
+</project>

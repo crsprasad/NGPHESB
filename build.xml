@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse.ant.import?>
+<!--
+	File: NGPHEsb project's build file.
+	Author:ISMAIL SHARIFF
+	Version 1.0, 29/AUG/2011
+-->	
+<project name="NGPH" basedir="." default="dist">
+	<property file="build.properties" description="NGPH ESB files"/>	
+	<!-- ========================================================= -->
+	<!-- Target: init                                              -->
+	<!-- Initialization         								   -->
+	<!-- ========================================================= -->	
+		
+	<target name="init">
+		<echo>Building project ${ant.project.name} ESB</echo>
+		<property name="src.path" value="src"/>	
+		<property name="build.dir" value="${dist.dir}/${ant.project.name}/classes"/>
+		<property name="esb.name" value="${ant.project.name}.esb"/>
+		<property name="esb.file" value="${dist.dir}/${esb.name}"/>
+		<property name="temp.folder" value="${dist.dir}/${ant.project.name}/temp"/>
+						
+		<copy includeemptydirs="false" todir="${temp.folder}/lib">
+	        <fileset dir="./esbcontent/lib">
+	        	<include name="**/*.jar"/>	
+	        	<exclude name="**/*.java"/>
+			    <exclude name="**/*.xml"/>
+			    <exclude name="**/*.properties"/>
+	        </fileset>
+		</copy> 
+		<copy file="${dist.dir}/NGPHCommon.jar" todir="${temp.folder}/lib"/>	    	
+		<copy todir="${temp.folder}">
+	        <fileset dir="${src.path}">	        	
+			    <include name="**/*.xml"/>
+	        	<include name="**/*.dtd"/>
+				<include name="**/*.properties"/>
+	        </fileset>
+		</copy>
+		<copy todir="${temp.folder}">
+	        <fileset dir="./esbcontent">	        	
+			    <include name="**/*.xml"/>		
+	        </fileset>
+		</copy>	
+		<copy todir="${temp.folder}">
+	        <fileset dir="./META-INF">	        	
+			    <include name="**/*.xml"/>		
+	        </fileset>
+		</copy>	
+	
+		<fileset dir="./esbcontent/lib" id="ext-jar_libs" >
+		    <include name="**/*.jar"/>		    
+		</fileset>
+		<fileset dir="${dist.dir}/JBossEsbLibraries" id="esb-jar_libs" >
+		    <include name="**/*.jar"/>		    
+		</fileset>
+		<fileset dir="${dist.dir}/JBossServerLibraries" id="jboss-jar_libs" >
+		    <include name="**/*.jar"/>		    
+		</fileset>
+		<fileset dir="${dist.dir}" id="common-jar_lib" >
+		    <include name="NGPHCommon.jar"/>		    
+		</fileset>
+		<fileset dir="${dist.dir}/CommonLibraries" id="ref-jar_libs" >
+		    <include name="**/*.jar"/>		    
+		</fileset>
+			
+		<path id="build.classpath" description="NGPH ESB Project's build class-path">
+			<fileset refid="ext-jar_libs" />
+			<fileset refid="esb-jar_libs" />
+			<fileset refid="jboss-jar_libs" />
+			<fileset refid="common-jar_lib" />
+			<fileset refid="ref-jar_libs" />
+		</path>
+	</target>
+	
+	<!-- ========================================================= -->
+	<!-- Target: compile                                           -->
+	<!-- Compiles the java files in the NGPH ESB project   -->
+	<!-- ========================================================= -->
+	<target name="compile" depends="init" >
+		<mkdir dir="${build.dir}" description="Creates the NGPH ESB project's build directory"/>		
+		
+		<!-- Compiles the Java classes -->
+		<javac srcdir="${src.path}" debug="on" destdir="${build.dir}" source="1.6" fork="true" includeantruntime="false">
+			<compilerarg value="-Xlint: all" />
+			<compilerarg value="-Xlint:-serial, -unchecked" />
+			<classpath refid="build.classpath"/>
+		</javac>
+	</target>	 
+		
+	<!-- ========================================================= -->
+	<!-- Target: dist                                              -->
+	<!-- Builds the NGPHWeb.war                           -->
+	<!-- ========================================================= -->
+	<target name="dist" depends="compile" description="Builds the NGPH.esb file">
+			
+		<jar basedir="${build.dir}" destfile="${esb.file}" >
+				
+			<fileset dir="${temp.folder}"/> 
+			
+		</jar> 
+		<!-- copy file="${dist.dir}/NGPH.esb" todir="/opt/jboss-5.1.0.GA/server/default/deploy"/ -->
+		<copy file="${dist.dir}/NGPH.esb" todir="C:/QNG/jboss-5.1.0.GA/server/default/deploy"/>
+	</target>   
+</project>
